@@ -8,5 +8,6 @@
  - Set Multiple Business Info Components
  - Set Services And Related Data With Style
  - FeaturedService Design Component
+ - MakeAppointment Design Component
 
 ## Project Server-Side
