@@ -10,5 +10,6 @@
  - FeaturedService Design Component
  - MakeAppointment Design Component
  - Testimonial Design Component
+ - Blog Design Component
 
 ## Project Server-Side
