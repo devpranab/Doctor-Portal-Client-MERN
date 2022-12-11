@@ -12,5 +12,6 @@
  - Testimonial Design Component
  - Blog Design Component
  - Doctors Design Component
+ - Contact Design Component
 
 ## Project Server-Side
