@@ -9,5 +9,6 @@
  - Set Services And Related Data With Style
  - FeaturedService Design Component
  - MakeAppointment Design Component
+ - Testimonial Design Component
 
 ## Project Server-Side
