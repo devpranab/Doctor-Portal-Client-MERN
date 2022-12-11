@@ -7,5 +7,6 @@
  - Apply Partial Background of Common Components
  - Set Multiple Business Info Components
  - Set Services And Related Data With Style
+ - FeaturedService Design Component
 
 ## Project Server-Side
