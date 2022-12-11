@@ -3,5 +3,6 @@
 ## Project Client-Side
  - Project Setup
  - Set navbar and header main component
+ - HeaderMain component
 
 ## Project Server-Side
