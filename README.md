@@ -11,5 +11,6 @@
  - MakeAppointment Design Component
  - Testimonial Design Component
  - Blog Design Component
+ - Doctors Design Component
 
 ## Project Server-Side

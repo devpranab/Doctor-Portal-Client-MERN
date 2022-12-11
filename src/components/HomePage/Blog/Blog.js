@@ -22,7 +22,7 @@ const blogData = [
     author: "Dr. Sinthia",
     authorImg: jack,
     date: "23 April 2019",
-  }
+  },
 ];
 
 const Blog = () => {
