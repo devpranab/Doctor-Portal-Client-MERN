@@ -1,16 +1,27 @@
-.partial-background {
-    height: 800px;
+.header-container{
     position: relative;
-    background-image: url('../../../images/ChireBG.png');
+    height: 720px;
+    background-image: url(../../../images/ChireBG.png) ;
     background-size: cover;
+    background-position: left;
+    z-index: 1;
+    margin-bottom: 100px;
+    /* in background image ---  linear-gradient(50deg,transparent 55%, #3a4256 45%), */
 }
-.partial-background::after {
-    height: 700px;
-    content:' ';
+
+.header-container::after{
+    content: " ";
+    height: 720px;
+    width: 25rem;
     position: absolute;
     top: 0;
-    width: 30%;
     right: 0;
-    background-color: #3A4256;
-    z-index: -2;
+    background-color: #3A4256; 
+    z-index: -1;
+}
+
+@media only screen and (max-width: 768px){
+    .header-container{
+        min-height: 920px;
+    }
 }

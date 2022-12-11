@@ -40,17 +40,17 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item active">
-              <Link className="nav-link mr-5 font-weight-bold" to="/reviews">
+              <Link className="nav-link mr-5 text-white font-weight-bold" to="/reviews">
                 Reviews
               </Link>
             </li>
             <li className="nav-item active">
-              <Link className="nav-link mr-5 font-weight-bold" to="/blog">
+              <Link className="nav-link mr-5 text-white font-weight-bold" to="/blog">
                 Blog
               </Link>
             </li>
             <li className="nav-item active">
-              <Link className="nav-link mr-5 font-weight-bold" to="/contact">
+              <Link className="nav-link mr-5 text-white font-weight-bold" to="/contact">
                 Contact Us
               </Link>
             </li>

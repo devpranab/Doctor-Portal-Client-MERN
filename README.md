@@ -4,5 +4,6 @@
  - Project Setup
  - Set navbar and header main component
  - HeaderMain component
+ - Apply Partial Background of Common Components
 
 ## Project Server-Side
