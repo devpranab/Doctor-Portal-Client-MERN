@@ -13,5 +13,6 @@
  - Blog Design Component
  - Doctors Design Component
  - Contact Design Component
+ - Footer Design Component
 
 ## Project Server-Side
