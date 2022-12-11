@@ -6,5 +6,6 @@
  - HeaderMain component
  - Apply Partial Background of Common Components
  - Set Multiple Business Info Components
+ - Set Services And Related Data With Style
 
 ## Project Server-Side
