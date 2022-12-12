@@ -14,5 +14,4 @@
  - Doctors Design Component
  - Contact Design Component
  - Footer Design Component
-
-## Project Server-Side
+ - Component Shared
