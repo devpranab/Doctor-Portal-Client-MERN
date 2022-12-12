@@ -22,3 +22,5 @@
  - Display a Modal from on Appointment Click
  - Style Modal Form & Extract Data to Send to Server
  - Login Page Design
+ - Login Auth Firebase
+   - add google login popup

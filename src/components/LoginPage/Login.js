@@ -1,7 +1,25 @@
 import React from "react";
 import loginBG from "../../images/loginBg.png";
+import firebase from "firebase/app";
+import "firebase/auth";
+
+// Initialize Firebase
+import firebaseConfig from './firebase.config.js';
+firebase.initializeApp(firebaseConfig);
+
 
 const Login = () => {
+  const googleProvider = new firebase.auth.GoogleAuthProvider();
+  const handleGoogleSignIn = () => {
+    firebase.auth().signInWithPopup(googleProvider)
+    .then(res => {
+    console.log(res);
+    })
+    .catch(err => {
+    console.log(err.message);
+    });
+  }
+
   return (
     <div className="container">
       <div className="row align-items-center" style={{ height: "100vh" }}>
@@ -16,7 +34,10 @@ const Login = () => {
             <input type="password" className="form-control" />
           </div>
           <div className="from-group mt-2">
-            <button className="btn text-white btn-brand">
+            <button
+              className="btn text-white btn-brand"
+              onClick={handleGoogleSignIn}
+            >
               Sign in with Google
             </button>
           </div>
