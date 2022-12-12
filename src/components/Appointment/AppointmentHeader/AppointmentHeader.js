@@ -3,12 +3,7 @@ import Chire from "../../../images/Chire.png";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
-const AppointmentHeader = () => {
-
-    const handleDateChange = date => {
-        console.log('Changing Date', date);
-    }
-
+const AppointmentHeader = ({handleDateChange}) => {
   return (
     <div>
       <main
