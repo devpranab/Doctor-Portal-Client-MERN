@@ -20,4 +20,5 @@
  - More Design to Appointment Header
  - Set Bookings with Selected Date & Style Booking Card
  - Display a Modal from on Appointment Click
-  git commit -m "Display a Modal from on Appointment Click"
+ - Style Modal Form & Extract Data to Send to Server
+ - Login Page Design
