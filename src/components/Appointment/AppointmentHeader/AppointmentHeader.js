@@ -1,26 +1,37 @@
 import React from "react";
-import Chire from "../../../images/Chire.png";
+import "./AppointmentHeader.css";
 import Calendar from "react-calendar";
+import chair from "../../../images/Chire.png";
 import "react-calendar/dist/Calendar.css";
 
-const AppointmentHeader = ({handleDateChange}) => {
+const AppointmentHeader = ({ handleDateChange }) => {
   return (
-    <div>
-      <main
-        style={{ height: "600px", width: "100%" }}
-        className="row d-flex align-items-center"
+    <main className="">
+      <div
+        style={{ height: "600px" }}
+        className="row  d-flex align-items-center justify-content-center "
       >
-        <div className="col-md-4 offset-md-1">
-          <h1 style={{color: "#3A4256"}}>Appointment</h1>
-          <br />
-          <br />
-          <Calendar onChange={handleDateChange} value={new Date()}/>
+        <div className="col col-sm-12 col-md-5 col-lg-4 col-xl-3">
+          <h1 style={{ color: "#3A4256", marginBottom: "50px" }}>
+            {" "}
+            Appointment{" "}
+          </h1>
+
+          <div className="react-calendar-custom">
+            <Calendar
+              onChange={handleDateChange}
+              value={new Date()}
+              className="calendar"
+            />
+          </div>
         </div>
-        <div className="col-md-6">
-          <img src={Chire} alt="" className="img-fluid"/>
-        </div>
-      </main>
-    </div>
+        <img
+          className="col col-sm-12 col-md-6 col-lg-6 col-xl-5 "
+          src={chair}
+          alt=""
+        />
+      </div>
+    </main>
   );
 };
 
