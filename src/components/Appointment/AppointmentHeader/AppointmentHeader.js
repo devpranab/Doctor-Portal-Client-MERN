@@ -1,7 +1,7 @@
 import React from "react";
 import "./AppointmentHeader.css";
-import Calendar from "react-calendar";
 import chair from "../../../images/Chire.png";
+import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
 const AppointmentHeader = ({ handleDateChange }) => {

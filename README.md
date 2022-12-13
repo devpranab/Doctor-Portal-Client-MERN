@@ -30,4 +30,5 @@
    - useNavigate for go home
    - edit storeAuthToken function
    - keep data in useContext for global access
- - Update Login Page Design  
+ - Update Login Page Design
+ - Dashboard Page(set untidy dashboard with three columns)
