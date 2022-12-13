@@ -2,6 +2,7 @@ import React from "react";
 import loginBG from "../../images/loginBg.png";
 import firebase from "firebase/app";
 import "firebase/auth";
+import { useNavigate, useLocation } from 'react-router-dom';
 
 // Initialize Firebase
 import firebaseConfig from './firebase.config.js';
@@ -9,8 +10,13 @@ if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
 }
 
-
 const Login = () => {
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const { from } = location.state || { from: { pathname: "/" } };
+
   const googleProvider = new firebase.auth.GoogleAuthProvider();
   const handleGoogleSignIn = () => {
     firebase.auth().signInWithPopup(googleProvider)
@@ -28,6 +34,8 @@ const Login = () => {
         .then(function (idToken) {
            console.log(idToken);
            sessionStorage.setItem('token', idToken);
+          // history.replace(from); //old
+          navigate(from);
         }).catch(function (error) {
             console.log(error)
         });
