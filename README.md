@@ -28,3 +28,4 @@
    - storeAuthToken firebase
    - id save in storage from storeAuthToken
    - useNavigate for go home
+   - edit storeAuthToken function

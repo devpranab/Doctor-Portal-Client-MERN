@@ -2,16 +2,15 @@ import React from "react";
 import loginBG from "../../images/loginBg.png";
 import firebase from "firebase/app";
 import "firebase/auth";
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation } from "react-router-dom";
 
 // Initialize Firebase
-import firebaseConfig from './firebase.config.js';
+import firebaseConfig from "./firebase.config.js";
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
 }
 
 const Login = () => {
-
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -19,27 +18,33 @@ const Login = () => {
 
   const googleProvider = new firebase.auth.GoogleAuthProvider();
   const handleGoogleSignIn = () => {
-    firebase.auth().signInWithPopup(googleProvider)
-    .then(res => {
-    console.log(res);
-    storeAuthToken();
-    })
-    .catch(err => {
-    console.log(err.message);
-    });
-  }
+    firebase
+      .auth()
+      .signInWithPopup(googleProvider)
+      .then((res) => {
+        console.log(res);
+        storeAuthToken();
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
 
   const storeAuthToken = () => {
-    firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
-        .then(function (idToken) {
-           console.log(idToken);
-           sessionStorage.setItem('token', idToken);
-          // history.replace(from); //old
-          navigate(from);
-        }).catch(function (error) {
-            console.log(error)
-        });
-}
+    firebase
+      .auth()
+      .currentUser.getIdToken(/* forceRefresh */ true)
+      .then(idToken => {
+        console.log(idToken);
+        sessionStorage.setItem("token", idToken);
+        navigate(from);
+      })
+      .catch(error => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
+  };
 
   return (
     <div className="container">
