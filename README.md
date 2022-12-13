@@ -30,3 +30,4 @@
    - useNavigate for go home
    - edit storeAuthToken function
    - keep data in useContext for global access
+ - Update Login Page Design  

@@ -67,6 +67,7 @@ const Login = () => {
           <div className="form-group">
             <label htmlFor="">Password</label>
             <input type="password" className="form-control" />
+            <p className="text-danger">Forgotten password?</p>
           </div>
           <div className="from-group mt-2">
             <button
