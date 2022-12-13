@@ -5,7 +5,9 @@ import "firebase/auth";
 
 // Initialize Firebase
 import firebaseConfig from './firebase.config.js';
-firebase.initializeApp(firebaseConfig);
+if (firebase.apps.length === 0) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 
 const Login = () => {
@@ -14,11 +16,21 @@ const Login = () => {
     firebase.auth().signInWithPopup(googleProvider)
     .then(res => {
     console.log(res);
+    storeAuthToken();
     })
     .catch(err => {
     console.log(err.message);
     });
   }
+
+  const storeAuthToken = () => {
+    firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
+        .then(function (idToken) {
+           console.log(idToken);
+        }).catch(function (error) {
+            console.log(error)
+        });
+}
 
   return (
     <div className="container">
