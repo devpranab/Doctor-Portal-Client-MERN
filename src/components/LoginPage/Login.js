@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useContext} from "react";
 import loginBG from "../../images/loginBg.png";
 import firebase from "firebase/app";
 import "firebase/auth";
+import { UserContext } from "../../App";
 import { useNavigate, useLocation } from "react-router-dom";
 
 // Initialize Firebase
@@ -11,6 +12,9 @@ if (firebase.apps.length === 0) {
 }
 
 const Login = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  console.log(loggedInUser);
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -23,10 +27,15 @@ const Login = () => {
       .signInWithPopup(googleProvider)
       .then((res) => {
         console.log(res);
+        const { displayName, email } = res.user;
+        const signedInUser = { name: displayName, email }
+        setLoggedInUser(signedInUser);
         storeAuthToken();
       })
       .catch((err) => {
-        console.log(err.message);
+        var errorCode = err.code;
+        var errMessage = err.message;
+        console.log(errorCode, errMessage);
       });
   };
 
