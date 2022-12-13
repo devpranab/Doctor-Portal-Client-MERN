@@ -24,3 +24,4 @@
  - Login Page Design
  - Login Auth Firebase
    - add google login popup
+   - error solved of add google login popup
