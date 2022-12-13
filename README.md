@@ -26,3 +26,4 @@
    - add google login popup
    - error solved of add google login popup
    - storeAuthToken firebase
+   - id save in storage from storeAuthToken

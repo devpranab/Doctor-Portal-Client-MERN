@@ -27,6 +27,7 @@ const Login = () => {
     firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
         .then(function (idToken) {
            console.log(idToken);
+           sessionStorage.setItem('token', idToken);
         }).catch(function (error) {
             console.log(error)
         });
