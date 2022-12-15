@@ -23,9 +23,24 @@ const AppointmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = data => {
     console.log(data);
-    closeModal();
+       data.service = appointmentOn;
+        data.date = date.toDateString();
+        data.created = new Date();
+
+        fetch('http://localhost:5000/addAppointment', {
+            method: "POST",
+            headers: {'content-type': 'application/json'},
+            body: JSON.stringify(data),
+        })
+        .then(res => res.json())
+        .then(success => {
+            if(success){
+                closeModal();
+                alert("Appointment created successfully.");
+            }
+        })
   };
 
   //console.log(watch("example")); // watch input value by passing the name of it
