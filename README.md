@@ -40,3 +40,13 @@
  - Dashboard Page(set untidy dashboard with three columns)
  - Create Server to store appointment in a database
  - PrivateRoute
+ - Updated PrivateRoute
+ - Display appointments for the selected 
+ 
+- Manage Images Admin Panel
+  - Create Admin page to upload image to the server
+  - Save Upload Image to the Server
+  - Display sensitive information to admin only
+  - Set admin panel with limited access based on permission
+  - Store image directly on mongodb and display them
+  - A small brief about google analytics lighthouse and page performance

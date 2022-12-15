@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { UserContext } from '../../../App';
+import { UserContext } from '../../App';
 import jwt_decode from "jwt-decode"
 import { Redirect, Route } from 'react-router-dom';
 
@@ -41,3 +41,13 @@ const PrivateRoute = ({children, ...rest}) => {
 };
 
 export default PrivateRoute;
+
+/*
+    <PrivateRoute path="/dashboard-appointment">
+      <DashboardAppointment/>
+    </PrivateRoute>
+
+    <PrivateRoute path="/addDoctor">
+      <AddDoctor />
+    </PrivateRoute>
+*/
